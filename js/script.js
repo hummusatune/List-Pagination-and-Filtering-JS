@@ -16,10 +16,20 @@ FSJS project 2 - List Filter and Pagination
    will only be used inside of a function, then it can be locally 
    scoped to that function.
 ***/
+const listItems = document.getElementsByTagName('li');
+let items = listItems.length;
+console.log(items);
 
+for (let i = 0; i < listItems.length; i++) {
+   listItems[i].style.fontSize = '3em';
+}
 
-console.log(listElement);
+const headerToggle = document.getElementsByTagName('h2')[0];
+console.log(headerToggle);
 
+headerToggle.addEventListener('click', () => {
+   headerToggle.style.border = 'solid 2px red';
+});
 
 /*** 
    Create the `showPage` function to hide all of the items in the 
