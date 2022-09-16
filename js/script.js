@@ -20,9 +20,13 @@ const listItems = document.getElementsByTagName('li');
 let items = listItems.length;
 console.log(items);
 
-for (let i = 0; i < listItems.length; i++) {
-   listItems[i].style.fontSize = '3em';
+for (const item of listItems) {
+   item.style.fontSize = '3em';
 }
+
+/* for (let i = 0; i < listItems.length; i++) {
+   listItems[i].style.fontSize = '3em';
+} */
 
 const headerToggle = document.getElementsByTagName('h2')[0];
 console.log(headerToggle);
