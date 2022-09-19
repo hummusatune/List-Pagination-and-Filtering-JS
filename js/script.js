@@ -18,13 +18,14 @@ FSJS project 2 - List Filter and Pagination
 ***/
 let listItems = document.querySelectorAll('.student-item');
 let totalItems = listItems.length;
-console.log(totalItems);
 
-for (const item of listItems) {
-	if (item >= 10) {
-		item.style.display = 'none';
-	}
+function showPage (itemsPerPage, currentPage) {
+   for(let i=itemsPerPage; i < totalItems; i++) {
+      listItems[i].style.display = 'none';
+   }
 }
+
+console.log(listItems);
 
 let pageButtonsUL = document.createElement('ul');
 pageButtonsUL.className = 'pagination';
